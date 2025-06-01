@@ -2700,7 +2700,7 @@
   --------------------------------------------------------------*/
   .footer {
     color: #fff;
-    background: url("/img/footer.jpg") top center no-repeat;
+    background: url("img/footer.jpg") top center no-repeat;
     display: block;
     background-size: cover;
     font-size: 14px;
