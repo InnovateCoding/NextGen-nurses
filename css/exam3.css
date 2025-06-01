@@ -1,0 +1,179 @@
+.round-button.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  
+  
+  .reason {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+
+
+h2 {
+    color: #30529c;
+    text-align: center;
+}
+
+
+.question-container {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+.question-container.active {
+    display: block;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #f5f5f5;
+    background: #e0e0e0 ;
+    border-radius: 20px;
+    justify-content: flex-start;
+
+}
+
+.option:hover {
+    background: #e0e0e0;
+}
+
+.correct {
+    background-color: lightgreen;
+    border-color: green;
+}
+
+.incorrect {
+    background-color: lightcoral;
+    border-color: red;
+}
+
+.correct-text {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong-text {
+    color: red;
+    font-weight: bold;
+}
+
+.reason {
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.skip-btn, .next-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.skip-btn {
+    background: #4ed3f6;
+    color: white;
+
+}
+
+.skip-btn:hover {
+    background-color: #0169d8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+.next-btn {
+    background: #3498db;
+    color: white;
+}
+
+.next-btn:hover {
+    background-color: #0169d8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+
+.round-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.round-button.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.round-button.answered {
+    background-color: #5f5f5f;
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.indicators {
+    display: flex;
+
+    margin: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+ 
+.round-button {
+    border: 2px solid #4ed3f6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0 7.5px 7.5px 0;
+    box-shadow: none;
+    text-align: center;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+
+  }
+  
+  .round-button.selected {
+    background-color: #3f8cfe;
+    color: white;
+  }
+
+
+  
+  .result{
+padding: 100px;
+font-size: 23px;
+font-weight: bold;
+color: #30529c;
+text-align: center;
+  }

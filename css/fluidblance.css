@@ -1,0 +1,124 @@
+
+/* شبكة الأدوية */
+.med-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+
+
+/* RESET أساسي لمنع تكسير العرض */
+*,*::before,*::after{
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+}
+
+html,body{
+  margin:0;
+  width:100%;
+  /* يمنع أي تمرير أفقي غير مقصود */
+  overflow-x:hidden;
+  background:#f1f5f9;
+  color:#1e293b;
+}
+
+/* ==== التنقّل ==== */
+nav{
+  display:flex;
+  gap:1rem;
+  padding:1rem 2rem;
+}
+nav button{
+  background:var(--color-primary);
+  border:none;
+  color:#fff;
+  font-size:1rem;
+  padding:.5rem 1rem;
+  cursor:pointer;
+  border-bottom:3px solid transparent;
+}
+nav button.active{border-color: #ffc732}
+
+/* ==== الصفحات ==== */
+.page{
+  display:none;              /* تُنشَّط فقط بإضافة .active */
+  padding:1.5rem;
+  max-width: 95%;
+  width:100%;
+  margin-inline:auto;
+}
+.page.active{display:block;}
+
+h2{
+  margin:0 0 1rem;
+  text-align:center;
+  color:#333;
+}
+
+/* ==== شبكة الأدوية ==== */
+.med-grid{
+  display:grid;
+  /* أصغر خانة 150px لكن لا تتعدّى العرض الكلي */
+  grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));
+  gap:.5rem;
+  margin:1.5rem 0;
+}
+.med-grid input{
+  padding:.6rem;
+  width:100%;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+}
+
+/* ==== الجدول ==== */
+.table-wrapper{            /* غلاف لتمرير أفقي عند الضيق بدون كسر الصفحة */
+  width:100%;
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  min-width:600px;        /* يضمن بقاء الأعمدة مقروءة؛ يتقلص داخل الـ wrapper */
+  border-collapse:collapse;
+  font-size:.85rem;
+  margin-bottom:2rem;
+}
+th,td{
+  border:1px solid #dbeafe;
+  padding:.4rem;
+  text-align:center;
+}
+th{
+  background:#e0f2fe;
+  font-weight:600;
+}
+tfoot td{
+  background:#f8fafc;
+  font-weight:600;
+}
+.cat{
+  background:#fdf2f8;
+  font-weight:600;
+  text-align:left;
+  padding-left:.5rem;
+}
+input.volume{
+  width:70px;
+  text-align:center;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  padding:.3rem;
+}
+
+/* ==== استجابة الشاشات الصغيرة ==== */
+@media (max-width:600px){
+  .page{padding:1rem;}
+  /* خانات أصغر في شبكة الأدوية */
+  .med-grid{
+    grid-template-columns:repeat(auto-fit,minmax(min(120px,100%),1fr));
+  }
+  th,td{font-size:12px;padding:.3rem;}
+}

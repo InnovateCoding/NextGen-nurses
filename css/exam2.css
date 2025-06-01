@@ -1,0 +1,39 @@
+
+        .question-container {
+            display: none;
+            margin: 20px 20px;
+        }
+        .active {
+            display: block;
+        }
+        .option {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .correct {
+            background-color: lightgreen;
+            border-color: green;
+        }
+        .incorrect {
+            background-color: lightcoral;
+            border-color: red;
+        }
+        .reason {
+            display: none;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .result {
+            display: none;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }

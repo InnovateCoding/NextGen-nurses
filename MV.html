@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BBK2JZ9P4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BBK2JZ9P4');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>nurses-questions</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/logo.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assests/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assests/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assests/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assests/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assests/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assests/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+
+  
+
+ 
+  <style>
+
+
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f4f7;
+ 
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #003049;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      flex: 1;
+      background: #ffffff;
+      color: #0c0d0e ;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .tab-button.active {
+      background: #379ce8;
+    }
+    .tab-button:hover{
+      background: #dce3e4;
+    }
+    .tab-content {
+      display: none;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      animation: fadeIn 0.3s ease-in-out;
+      margin: 60px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      color: #379ce8;
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+
+
+
+    
+    .table-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background-color: #379ce8;
+      color: white;
+      text-align: left;
+      padding: 16px;
+      font-size: 18px;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-top: 1px solid #eee;
+      vertical-align: top;
+    }
+
+    tr:hover {
+      background-color: #deedf8;
+    }
+
+   .tab-content .highlight {
+      color: #47a9f5;
+      font-weight: bold;
+    }
+
+   .tab-content li {
+     
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #222;
+      line-height: 1.7;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+      padding: 10px 16px 10px 36px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: background-color 0.3s;
+    }
+    
+   .tab-content li::before {
+      content: "✔"; /* يمكن تغييره إلى • أو ⏺ أو ▪ حسب رغبتك */
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #379ce8; /* لون العلامة */
+      font-size: 14px;
+      line-height: 1.6;
+    }
+   .tab-content li:hover {
+      background-color: #aedcff;
+    }
+   .tab-content ul, ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  
+      <a href="index.html" class="logo d-flex align-items-center">
+  
+  
+        <img src="img/logo.png" alt="">
+        <h1>NextGen Nurses</h1>
+      </a>
+   
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar" >
+        <ul>
+  
+        
+          <li><a href="https://t.me/NextGenNurses_bot" class= "d-flex align-items-center justify-content-center">
+              <i class="fa-brands fa-telegram fa-lg"> t. bot </i></a> </li>
+  
+  
+              <li class="dropdown"><a href="ABG.html"><span>Departments</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  
+                  <li class="dropdown"><a href="fluidblance.html"><span>ICU</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+               <ul>
+  
+                <li><a href="fluidblance.html"> Fluid Balance chart</a></li>
+                  
+                  <li><a href="heparin-scale.html">heparin scale</a></li>
+                  <li><a href="minsulinscale.html">Medical Insulin Infusion </a></li>
+                  <li><a href="insulin-sur.html">surgical Insulin Infusion </a></li>
+                  <li><a href="dka-scale.html">DKA Adult Calculator</a></li>
+                  <li><a href="icucondition.html">ICU Conditions</a></li>
+                 
+                  <li><a href="situations.html"> emergancy situation </a></li>
+       
+                  <li><a href="adultmed.html">medication</a></li>
+                  <li><a href="icubundels.html">Bundles of ICU</a></li>
+                  <li><a href="Scale.html">Scales of ICU</a></li>
+                  
+                  <li><a href="isolation.html">Isolation Precautions </a></li>
+                  <li><a href="position.html">positions of patient</a></li>
+                  <li><a href="vitalsigns.html">vital signs</a></li>
+                  <li><a href="ecg.html">ECG</a></li>
+                  <li><a href="ABG.html">ABG</a></li>
+                  <li><a href="MV.html">MECHANICAL VENTILATION</a></li> 
+                  <li class="dropdown"><a href="CvpEx.html"><span>PROCEDURES</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                      <li><a href="CVP.html">CVP</a></li>
+                      <li><a href="CvpEx.html">CVP Exam</a></li>
+                    </ul>
+                 </li>
+                  <li><a href="labs.html">LABS</a></li>
+                  
+               </ul>
+                  </li>
+  
+                  <li class="dropdown"><a href="vidio1.html"><span>NICU</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                      <ul>
+                       
+                        <li><a href="medcalc.html">medication calc</a></li>
+                        <li><a href="vitalsigns.html">Common Neonatal Conditions</a></li>
+                        <li><a href="Scale.html">Neonatal Resuscitation</a></li>
+                        <li><a href="Scale.html">Thermoregulation in Neonates</a></li>
+                        <li><a href="Scale.html">Neonatal Nutrition</a></li>
+                        <li><a href="Scale.html">Ventilation in Neonates</a></li>
+                        <li><a href="Scale.html">Infection Prevention in NICU</a></li>
+                        <li><a href="Scale.html">Umbilical Line and IV Care</a></li>
+                        <li><a href="parental_education.html">Parental Education</a></li>
+                      </ul>
+                        </li>
+      
+                        <li class="dropdown"><a href="vidio1.html"><span>OR</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                          <ul>
+                            <li><a href="gamet1.html">surgical instrumente</a></li>
+                            <li><a href="vitalsigns.html">hand scrup</a></li>
+                          </ul>
+                            </li>
+                </ul>
+              </li>
+  
+         <li><a href="https://www.linkedin.com/company/nextgen-nurse/">Jobs</a></li>
+          <li><a href="https://www.facebook.com/NextGenNurses">Socity</a></li>
+  
+  
+         
+          <li class="dropdown"><a href="https://www.facebook.com/NextGenNurses"><span>Social</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="https://www.facebook.com/NextGenNurses">facebook</a></li>
+              <li><a href="https://www.youtube.com/@NextGenNurses">YouTube</a></li>
+              <li><a href="https://www.youtube.com/@NextGenNurses">Twitter</a></li>
+              <li><a href="https://t.me/+AHXqVkeABQpjODBk">telegram</a></li>
+            </ul>
+          </li>
+  
+          <li class="dropdown"><a href="#"><span>Exams</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li class="dropdown"><a href="icuexame.html"><span>ICU</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="icuexame.html">written</a></li>
+                  <li><a href="exam2.html">Oral</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="icuexame.html"><span>NICU</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="exNicu.html">written</a></li>
+                  <li><a href="exNicu.html">Oral</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="icuexame.html"><span>OR</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="icuexame.html">written</a></li>
+                  <li><a href="exam2.html">Oral</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="icuexame.html"><span>Emergancy Room</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="icuexame.html">written</a></li>
+                  <li><a href="exam2.html">Oral</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="exam9.html"><span>Nclex</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="exam1.html">Exam 1 (50 q) </a></li>
+                  <li><a href="exam2.html">Exam 2 (50 q)</a></li>
+                  <li><a href="exam3.html">Exam 3 (100 q)</a></li>
+                  <li><a href="exam4.html">Exam 4 (55 q)</a></li>
+                  <li><a href="exam5.html">Exam 5 (105 q)</a></li>
+                  <li><a href="exam6.html">Exam 6 (55 q)</a></li>
+                  <li><a href="exam7.html">Exam 7 (128 q)</a></li>
+                  <li><a href="exam8.html">Exam 8 (120 q)</a></li>
+                  <li><a href="exam9.html">Exam 9 (154 q)</a></li>
+                  <li><a href="exam10.html">Exam 10 (140 q)</a></li>
+                  <li><a href="exam11.html">Exam 11 (100 q)</a></li>
+                </ul>
+              </li>
+  
+  
+              
+              <li class="dropdown"><a href="exam9.html"><span>EMLS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="emle1.html">EMLE 1 </a></li>
+                  <li><a href="EMLS.html">EMLS 2</a></li>
+                  <li><a href="exam3.html">Exam 3</a></li>
+        
+                </ul>
+            </li>
+            
+            <li class="dropdown"><a href="prometric.html"><span>برومترك | Prometric</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="prometric.html">Exam 1 (108q) </a></li>
+                <li><a href="prometric.html">Exam 2</a></li>
+              </ul>
+          </li>
+  
+            </ul>
+          </li>
+         
+          <li class="dropdown"><a href="https://certify.savealife.com/grants-pals-certification/"><span>Edu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li class="dropdown"><a href="https://certify.savealife.com/grants-acls-certification/"><span>NHCPS</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>  
+                  <li><a href="https://certify.savealife.com/grants-pals-certification/">Free PALS</a></li>
+                  <li><a href="https://certify.savealife.com/grants-acls-certification/">Free ACLS</a></li>
+                  <li><a href="https://certify.savealife.com/grants-bls-certification/">Free BLS</a></li>
+                  <li><a href="https://certify.savealife.com/grants-cpr-certification/">Free CPR, AED , Frist Aid</a></li>
+                  <li><a href="https://certify.savealife.com/grants-bbp-certification/">Free BBP</a></li>
+                </ul>
+  
+                <li><a href="https://alison.com/tag/nursing#google_vignette">other Nursing Courses</a></li>
+              </li>
+            </ul>
+          </li>
+         
+      
+          <li><a href="about.html">About</a></li>
+      
+  
+         
+        </ul>
+        
+      </nav><!-- .navbar -->
+  
+    </div>
+  </header><!-- End Header -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2> Nclex</h2>
+        <ol>
+          <li><a href="index.html">Main</a></li>
+          <li> fast review 1 </li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs --> 
+
+
+  <div class="tabs">
+    <div class="tab-button active" onclick="openTab(event, 'mode')">1. moods</div>
+    <div class="tab-button" onclick="openTab(event, 'assessment')"> تقييم الحاجة</div>
+    <div class="tab-button" onclick="openTab(event, 'initial-settings')">2. الإعدادات الأولية</div>
+    <div class="tab-button" onclick="openTab(event, 'monitoring')">3. المراقبة</div>
+    <div class="tab-button" onclick="openTab(event, 'liberation')">4. الاستقلال عن التهوية</div>
+    <div class="tab-button" onclick="openTab(event, 'post')">5. بعد نزع الأنبوب</div>
+    <div class="tab-button" onclick="openTab(event, 'alarm')">5. Ventilator Alarms</div>
+    <div class="tab-button" onclick="openTab(event, 'Complications')">5. Ventilator Complications</div>
+  
+  </div>
+
+
+  <div id="mode" class="tab-content active">
+    <div class="section">
+  <h2>Modes of Ventilation</h2>
+  Controlled Mechanical Ventilation (CMV): Machine controls rate of
+  breathing.<br> Delivery of preset volume (TV) and rate regardless of
+  patient's breathing pattern. Sedation or paralyzing agent (e.g.,
+  Pavulon) usually required.<br>
+  Assist Controlled Ventilation (ACV): Patient controls rate of breathing.
+  Inspiratory effort triggers delivery of preset volume.<br>
+  Intermittent Mandatory Ventilation (IMV): Patient breathes spontaneously (own tidal volume) between ventilator breaths of a preset
+  volume and rate.<br>
+  Synchronized Intermittent Mandatory Ventilation (SIMV): A form of
+  pressure support ventilation.<br> Administers mandatory ventilator breath at a preset level of positive airway pressure. Monitors negative inspiratory effort and augments patient's spontaneous tidal volume or inspiratory effort.<br> Synchronized with patient's breathing pattern.
+  Positive End-Expiratory Pressure (PEEP): Increases oxygenation by increasing functional residual capacity (FRC). Keeps alveoli inflated after expiration. Can use lower O, concentrations with PEEP; decreas- es risk of O₂ toxicity. Ordered as 5–-10 cm H₂O. Continuous Positive Airway Pressure (CPAP): Maintains positive pressure throughout the respiratory cycle of a spontaneously ing patient. breathend of expiration.
+   Increases
+   Less
+   the amount of air remaining in the lungs at the complications H₂O. than PEEP. Ordered as 5-10 cm
+  Bilevel Positive Airway Pressure (BiPAP): Same as CPAP but settings can be adjusted for both inspiration Pressure and expiration. Support Ventilation (PSV): Patient's inspiratory effort is assisted by the ventilator to a certain level of pressure. Patient initiates all breaths and controls flow rate and tidal volume. Decreases work of breathing.
+  Inverse Ratio Ventilation (IRV): All breaths are pressure limited and
+  time cycled. Insp
+</div>
+</div>
+
+
+  <div id="assessment" class="tab-content">
+    <div class="section">
+      <h2>متى نحتاج للتهوية الميكانيكية الغازية؟</h2>
+      <ul>
+        <li>توقف التنفس أو توقف تنفسي وشيك</li>
+        <li>نوبات شديدة من الربو أو COPD مع أعراض حادة مثل الحماض التنفسي + (عدم الاستقرار القلبي، تدهور الوعي...)</li>
+        <li>فشل عضلات التنفس كما في الأمراض العصبية العضلية مع انخفاض VT أو PI max</li>
+        <li>فشل تنفسي نقص تأكسج حاد رغم استخدام أكسجين عالي التدفق</li>
+        <li>لحماية مجرى الهواء (GCS منخفضة، إفرازات كثيرة...)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="initial-settings" class="tab-content">
+    <div class="section">
+      <h2>الإعدادات الأولية للتهوية</h2>
+      <ul>
+        <li>Calculate predicted body weight   Males: PBW= 50 + 2.3 [height (inches) - 60]</li>
+
+      <li>  Females: PBW= 45.5 + 2.3 [height (inches) -60]</li>
+
+      <ul>
+        </li> Calculate minute ventilation (VE) using body surface area (BSA)</li>
+        </li>Males: BSA x 4
+        </li>Females: BSA x 3.5</li>
+      </ul>
+        <li>وضع التهوية: Assist/Control (Volume هو الشائع)</li>
+        <li>VT = 6 ml/kg PBW</li>
+        <li>RR = VE / VT</li>
+        <li>FiO2: ابدأ بـ 100% ثم خفض تدريجياً حسب الحالة</li>
+        <li>PEEP: ابدأ بـ 5 cmH2O واستخدم جداول ARDSnet</li>
+        <li>I:E Ratio = 1:2 (تعدل حسب الحاجة)</li>
+      </ul>
+      <h2>Select Mode</h2>
+      <ul>
+        <li>Assist/control mode is the preferred ventilator mode for most conditions. The name may vary depending on the type of ventilator (e.g., Draeger- IPPV assist, SCMV, Vol A/C).</li>
+        <li> Decision on whether to put pressure control ventilation (PCV) or volume control ventilation (VCV) depends on the operator and institutional preference. In Nepal. First preferred mode is Volume Assist Control.</li>
+      </ul>
+      <h2>Set Tidal Volume (VT)</h2>
+      <ul>
+        <li>V T is commonly set at 6 ml/kg of predicted body weight (PBW).</li>
+        <li>In PCV, the pressure control should be adjusted to achieve the target V T.</li>
+      
+        </ul>
+
+        <h2>Set Respiratory Rate (RR)</h2>
+        <ul>
+          <li>Respiratory rate (RR) is set to achieve the target minute ventilation (VE). RR= VE/ V T E.g., if target V E is 6 L and target V T is 300 ml then RR is set at 6000/300= 20 breaths/min.</li>
+          <li>For obstructive airway diseases (e.g., COPD), initial RR should be kept low at 8-12 breaths/min to avoid air trapping and generation of auto PEEP.</li>
+       </ul>
+
+       
+       <h2>Set FiO 2</h2>
+       <ul>
+         <li>Start with FiO 2 of 100%.</li>
+         <li>بعد استقرار الحالة بنقلل نسبة FiO 2 لتحقيق مستوي الاكسجين المطلوب للحال   Targets may vary according to disease condition (e.g., ARDS: PaO2≥55mmHg or SPO2≥ 88%; TBI: SPO2≥ 94%).</li>
+      </ul>
+
+
+      
+      <h2>Set PEEP</h2>
+      <ul>
+        <li>Start with a minimum PEEP of 5 cm H2O.</li>
+        <li>Many methods of setting PEEP; most common technique is to use the PEEP- FiO 2 table of ARDSnet trial.</li>
+        <li>Lower PEEP may be required in obstructive airway diseases without spontaneous breathing.</li>
+        <li>PEEP selection can be done from one of the following tables. In Nepal, we commonly use lower PEEP/higher FiO2</li>
+     </ul>
+
+     
+     <h2>Inspiratory time and I:E ratio</h2>
+     <ul>
+       <li>I:E ratio is set at 1:2.</li>
+       <li>Higher ratio (1:1) may be required for better oxygenation and a lower ratio (1:3) may be required for carbon dioxide removal and for patients with obstructive airway disease (e.g., COPD).</li>
+       <li>I:E ratio can be set directly in some ventilators (e.g., Maquet Servo); in some, this will be determined by setting the inspiratory time and RR (e.g., Drager Evita XL).</li>
+   
+    </ul>
+
+    </div>
+    <section>
+      <h3 class="text-xl font-semibold mb-2">PEEP/FiO2 Tables (ARDSnet)</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto border border-gray-300 text-sm">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border px-4 py-2">FiO2</th>
+              <th class="border px-4 py-2">PEEP (cmH2O)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border px-4 py-2">0.3 - 0.4</td>
+              <td class="border px-4 py-2">5 - 8</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <td class="border px-4 py-2">0.5 - 0.6</td>
+              <td class="border px-4 py-2">8 - 10</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border px-4 py-2">0.7 - 0.9</td>
+              <td class="border px-4 py-2">12 - 18</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <td class="border px-4 py-2">1.0</td>
+              <td class="border px-4 py-2">18 - 24</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <div id="monitoring" class="tab-content">
+    <div class="section">
+      <h2>المراقبة أثناء التهوية</h2>
+      <ul>
+        <li>الضغط: Pplat < 30، و Driving Pressure < 14</li>
+        <li>موجات التهوية: لرصد مقاومة/تسرب/تزامن</li>
+        <li>ثاني أكسيد الكربون: اضبط RR حسب الصيغة، واسمح بفرط الكربون إذا كان pH > 7.2</li>
+        <li>الضغط الدموي: راقب دائماً لاحتمالية حدوث انخفاض بعد بدء التهوية</li>
+      </ul>
+    </div>
+  </div>
+  <div id="liberation" class="tab-content">
+    <div class="section">
+      <h2>Weaning Methods</h2>
+      <ul>
+        <li><strong>IMV/SIMV weaning:</strong> Decrease IMV rate every 1-4 hrs. Monitor spontaneous breaths. Obtain ABGs within 30 min of ventilator change. Allows for gradual change from positive-pressure ventilation to spontaneous-pressure ventilation.</li>
+        <li><strong>CPAP/BIPAP:</strong> Provides expiratory support, maintains positive intrathoracic pressure. BIPAP adds inspiratory muscle support to CPAP. Prevents respiratory muscle fatigue.</li>
+        <li><strong>PSV:</strong> Use low levels of PSV (5-10 cm H₂O). Decrease in 3-6 cm H₂O increments. Useful in retraining respiratory muscles due to long-term ventilation.</li>
+        <li><strong>T-tube weaning:</strong> Place patient on T-tube circuit on same FiO₂ as on ventilatory assistance. Monitor ABGs after 30 min. Provide a brief rest period on the ventilator as needed. Continue to monitor ABGs until satisfactory. Extubate when patient is rested, with good spontaneous respiratory effort, and ABGs within acceptable parameters.</li>
+      </ul>
+    </div>
+  
+    <div class="section">
+      <h2>Assessing Readiness to Wean</h2>
+      <h3>Clinical Criteria</h3>
+      <ul>
+        <li>Resolution of disease</li>
+        <li>Adequate cough and reduced amount of secretions</li>
+      </ul>
+  
+      <h3>Objective Criteria</h3>
+      <h4>Adequate Oxygenation</h4>
+      <ul>
+        <li>SpO₂ ≥ 90% or PaO₂ > 60 mmHg with PEEP ≤ 8 cm H₂O and FiO₂ ≤ 0.4</li>
+        <li>PaO₂/FiO₂ ≥ 150</li>
+      </ul>
+  
+      <h4>Adequate Ventilation</h4>
+      <ul>
+        <li>RR ≤ 35 breaths/min</li>
+        <li>Generated VT > 5 ml/kg</li>
+        <li>Vital capacity > 10 ml/kg</li>
+        <li>No clinically significant respiratory acidosis</li>
+      </ul>
+  
+      <h4>Stable Cardiovascular System</h4>
+      <ul>
+        <li>HR < 140 bpm</li>
+        <li>Stable blood pressure or minimal/no use of pressors or inotropes</li>
+      </ul>
+  
+      <h4>Combined Indices</h4>
+      <ul>
+        <li>Rapid Shallow Breathing Index (RSBI) = RR / VT &lt; 105 (VT in liters)</li>
+      </ul>
+  
+      <h4>Adequate Mentation</h4>
+      <ul>
+        <li>Arousable</li>
+        <li>GCS ≥ 13</li>
+        <li>No continuous sedative infusions</li>
+      </ul>
+    </div>
+  
+    <div class="section">
+      <h2>Spontaneous Breathing Trial (SBT)</h2>
+      <p>Once a patient is assessed as ready to wean, an SBT should be performed daily using any of the following methods:</p>
+      <ul>
+        <li>Pressure Support Ventilation (PSV)</li>
+        <li>Continuous Positive Airway Pressure (CPAP)</li>
+        <li>T-piece</li>
+        <li>Automatic Tube Compensation (ATC)</li>
+      </ul>
+  
+      <h3>Preferred Method</h3>
+      <p>PSV of ≤ 8 cm H₂O for 30 minutes to a maximum of 2 hours (especially in initial weaning trials)</p>
+  
+      <h3>Tolerance Criteria</h3>
+      <ul>
+        <li>SpO₂ ≥ 90% and/or PaO₂ ≥ 60 mmHg</li>
+        <li>Spontaneous VT ≥ 4 ml/kg PBW</li>
+        <li>RR ≤ 35/min</li>
+        <li>pH ≥ 7.3</li>
+        <li>No signs of respiratory distress (i.e., absence of 2 or more of the following):
+          <ul>
+            <li>HR > 120% of baseline</li>
+            <li>Marked use of accessory muscles</li>
+            <li>Abdominal paradox</li>
+            <li>Diaphoresis</li>
+            <li>Marked dyspnea</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <div id="post" class="tab-content">
+    <div class="section">
+      <h2>Nursing assessment during weaning</h2>
+      <ul>
+        <li>Vital signs and hemodynamics (PAS, PAD, PCWP, CO, CT)</li>
+        <li>Dysrhythmias or ECG changes</li>
+        <li>Oxygenation/Efficiency of gas exchange</li>
+        <li>CO₂ production and elimination</li>
+        <li>pH level</li>
+        <li>Bedside pulmonary function tests</li>
+        <li>Work of breathing indluding use of accessory muscles</li>
+        <li>Level of fatigue</li>
+        <li>Patient discomfort</li>
+        <li>Adequate nutrition</li> 
+        <h2>If the patient’s SBT is successful, extubation can be performed if there is strong cough.</h2>
+         <ul>
+          <li>Cuff leak is performed for patients with high risk of subglottic edema, which include</li>
+          <li>Traumatic intubation.</li>
+          <li>Intubation >6 days.</li>
+          <li>Reintubation after unplanned Extubation.</li>
+          <li>Females.</li>
+          <li>Large endotracheal tube for size.</li> </ul>
+             <h2>If extubation has to be postponed, reassessment for possible extubation should be done after 12 hours.</h2>
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="alarm" class="tab-content">
+    <div class="section">
+      <h2>Common Causes of Ventilator Alarms</h2>
+      <ul>
+        <li>Patient causes:</li>
+          <ul>
+            <li>Biting down on endotracheal tube</li>
+            <li>Patient needs suctioning</li>
+            <li>Coughing</li>
+            <li>Gagging on endotracheal tube</li>
+            <li>Patient "bucking" or not synchronous with the ventilator</li>
+            <li>Patient attempting to talk</li>
+            <li>Patient experiences period of apnea</li>
+          </ul>
+
+        <li>Mechanical causes</li>
+          <ul>
+            <li>Kinking of ventilator tubing</li>
+            <li>Endotracheal tube cuff may need more air </li>
+            <li>Leak in endotracheal tube cuff</li>
+            <li>Excess water in ventilator tubing</li>
+            <li>Leak or disconnect in the system</li>
+            <li>Air leak from chest tube if present</li>
+            <li>Malfunctioning of oxygen system </li>
+            <li>Loss of power to ventilator</li>
+          </ul>
+
+        <li>Pathophysiological causes</li>
+          <ul>
+            <li>Increased lung noncompliance, such as in ARDS</li>
+            <li> Pneumothorax or hemothorax</li>
+            <li> Increased airway resistance, such as in bronchospasm</li>
+            <li>Pulmonary edema</li>
+          </ul>
+
+          <li>Nursing Interventions</li>
+          <ul>
+            <li>Check ventilator disconnects and tubing.</li>
+            <li>Insert bite block or oralairway.</li>
+            <li> Check endotracheal cuff pressure.</li>
+            <li>Remove excess water from ventilatortubing</li>
+            <li>Assess breath sounds, suction asneeded.</li>
+          </ul>
+
+      </ul>
+    </div>
+  </div>
+
+
+  
+  <div id="Complications" class="tab-content">
+ 
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Problem</th>
+          <th>Symptoms</th>
+          <th>Management</th>
+        </tr>
+        <tr>
+          <td><span class="highlight">Barotrauma or Volutrauma</span><br>Acute lung injury</td>
+          <td>
+            <ul>
+              <li>High peak inspiratory pressures</li>
+              <li>Diminished breath sounds</li>
+              <li>Mean airway pressure</li>
+              <li>Tracheal shift</li>
+              <li>Subcutaneous crepitus</li>
+              <li>Hypoxemia</li>
+              <li>Pneumothorax / Tension pneumothorax</li>
+              <li>Pneumomediastinum</li>
+              <li>Pneumoperitoneum</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Insert chest tube</li>
+              <li>Needle thoracostomy</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">Intubation of Right Main Bronchus</span></td>
+          <td>
+            <ul>
+              <li>Absent or diminished breath sounds in left lung</li>
+              <li>Unilateral chest excursion</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Reposition Endotracheal Tube (ETT)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">ETT Out of Position / Unplanned Extubation</span></td>
+          <td>
+            <ul>
+              <li>Absent or diminished breath sounds</li>
+              <li>Note tube location at lip (21–22 cm)</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Reposition ETT or reintubate</li>
+              <li>Restrain only when necessary</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">Tracheal Damage due to High Cuff Pressure</span> <br>(>30 cm H₂O)</td>
+          <td>
+            <ul>
+              <li>Blood in sputum during suctioning</li>
+              <li>Frequent ventilator alarms</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Monitor ETT cuff pressure every 4–8 hrs</li>
+              <li>Perform minimal leak technique</li>
+              <li>Ensure minimal occluding volume</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">Damage to Oral or Nasal Mucosa</span></td>
+          <td>
+            <ul>
+              <li>Skin breakdown or necrosis of lips, nares, or oral mucosa</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Reposition tube side-to-side of mouth daily</li>
+              <li>Apply petroleum jelly to nares</li>
+              <li>Provide oral care with toothbrush every 2 hrs</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">Aspiration</span></td>
+          <td>
+            <ul>
+              <li>Feeding visible during suctioning</li>
+              <li>Blue sputum if blue dye is used</li>
+              <li>Possible tracheoesophageal fistulas</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Use blue dye with enteral feeds if aspiration suspected</li>
+              <li>Keep head of bed elevated 30–45 degrees</li>
+              <li>Administer PPIs or H₂ receptor antagonists</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">Ventilator-Assisted Pneumonia & Hemodynamics</span></td>
+          <td>
+            <ul>
+              <li>Respiratory infection</li>
+              <li>Increased risk of sinusitis</li>
+              <li>Hypotension</li>
+              <li>Decreased venous return → ↓ cardiac output due to ↑ intrathoracic pressure</li>
+              <li>Decreased CVP, RAP, and preload</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Refer to section on VAP</li>
+              <li>Assess sputum color and odor</li>
+              <li>Monitor temperature, WBC, ESR</li>
+              <li>Monitor vital signs and hemodynamics</li>
+            </ul>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td><span class="highlight">Psychosocial Concerns</span></td>
+          <td>
+            <ul>
+              <li>Fear, anxiety, powerlessness</li>
+              <li>Difficulty sleeping, nightmares</li>
+              <li>Pain, loneliness</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Administer anxiolytics, sedatives, analgesics</li>
+              <li>Cluster care activities to promote sleep</li>
+              <li>Encourage patient choices when appropriate</li>
+              <li>Allow frequent family visits</li>
+              <li>Keep patient and family informed</li>
+            </ul>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td><span class="highlight">Communication Difficulties</span></td>
+          <td>
+            <ul>
+              <li>Impaired ability to communicate</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Keep communication simple</li>
+              <li>Obtain slate or writing board</li>
+              <li>Use letter/picture chart</li>
+              <li>Use sign language</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><span class="highlight">Urinary Tract Infection</span></td>
+          <td>
+            <ul>
+              <li>Cloudy, concentrated, odorous urine</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Change or remove Foley catheter</li>
+              <li>Ensure adequate hydration</li>
+              <li>Administer antiinfectives</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><span class="highlight">Deep Vein Thrombosis (DVT)</span></td>
+          <td>
+            <ul>
+              <li>Painful, swollen leg</li>
+              <li>Pain may increase on dorsiflexion</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Assess for pulmonary embolism</li>
+              <li>Refer to respiratory section if needed</li>
+              <li>Administer heparin or enoxaparin</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="highlight">Paralytic Ileus</span></td>
+          <td>
+            <ul>
+              <li>Absent or diminished bowel sounds</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Provide nasogastric drainage with intermittent suction</li>
+              <li>Turn and position patient frequently</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><span class="highlight">Inadequate Nutrition / Protein Loss</span></td>
+          <td>
+            <ul>
+              <li>Refer to section on nutrition</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Start enteral feedings if appropriate</li>
+              <li>Start total parenteral nutrition if GI tract is nonfunctional or contraindicated</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><span class="highlight">Increased Intracranial Pressure</span></td>
+          <td>
+            <ul>
+              <li>Changes in level of consciousness</li>
+              <li>Unable to follow commands</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Assess neurological status frequently</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><span class="highlight">Fluid Retention</span><br>Due to humidification & ADH release</td>
+          <td>
+            <ul>
+              <li>Assess for edema</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Administer diuretics</li>
+              <li>Drain ventilator tubing frequently</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td><span class="highlight">Immobility & Skin Breakdown</span></td>
+          <td>
+            <ul>
+              <li>Skin breakdown</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Turn and position patient frequently</li>
+              <li>Assess skin for breakdown</li>
+              <li>Assist patient out of bed to chair if not contraindicated</li>
+              <li>Keep skin clean and dry</li>
+              <li>Ensure wrinkle-free sheets</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td><span class="highlight">Stress Ulcer and GI Bleeding</span></td>
+          <td>
+            <ul>
+              <li>Blood in nasogastric drainage</li>
+              <li>Hematemesis and/or melena</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Hematest NG drainage, emesis, feces</li>
+              <li>Administer PPIs or H₂ receptor antagonists</li>
+            </ul>
+          </td>
+        </tr>
+
+
+
+      </table>
+    </div>
+    
+
+
+  </div>
+
+
+
+
+
+
+
+<!-- ======= Footer ======= -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="footer-content position-relative">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <h3>NextGen Nurses</h3>
+            <p>
+              Kafr elshaikh city<br>
+              cairo, egypt<br><br>
+              <strong>telephone :</strong> +20 01127820419<br>
+              <strong>Email:</strong> marwa.khattab@gmail.com<br>
+            </p>
+            <div class="social-links d-flex mt-3">
+              <a href="https://twitter.com/OsretkAmana?s=20" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100091003714934" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+              <a href="https://t.me/family_planning_bot" class="d-flex align-items-center justify-content-center"><i class="bi bi-telegram"></i></a>
+              <a href="https://youtube.com/@osretkamana" class="d-flex align-items-center justify-content-center"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div><!-- End footer info column-->
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>صفحات مفيدة</h4>
+          <ul>
+            <li><a href="main.html">main</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="blog.html">news</a></li>
+            <li><a href="about.html">privacy</a></li>
+          </ul>
+        </div><!-- End footer links column-->
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>our services</h4>
+          <ul ><li><a href="fluidblance.html"> fluid sheet</a></li>
+            <li><a href="heparin-scale.html">heparin scale</a></li>
+            <li><a href="icubundels.html"> icu scale</a></li>
+            <li><a href="insulin-sur.html">Surgical insulin scale </a></li>
+            <li><a href="ABG.html">ABG</a></li>
+  
+  
+            <li><a href="dka-scale.html">dka-scale</a></li>
+  
+  
+          </ul>
+        </div><!-- End footer links column-->
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>ramdom exam</h4>
+          <ul>
+            <li><a href="exam1.html">exam 1</a></li>
+            <li><a href="exam1.htm2">exam 2</a></li>
+            <li><a href="exam1.htm3">exam 3</a></li>
+            <li><a href="exam1.htm4">exam 4</a></li>
+            <li><a href="exam1.htm5">exam 5</a></li>
+            <li><a href="exam1.htm6">exam 6</a></li>
+          </ul>
+        </div><!-- End footer links column-->
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>team</h4>
+          <ul>
+            <li><a href="#">marwa khattab</a></li>
+  
+            <li><a href="#">you :&#x29;</a></li>
+  
+          </ul>
+        </div><!-- End footer links column-->
+  
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-legal text-center position-relative">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>marwa khattab</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+  
+        Designed by <a href="https://www.facebook.com/profile.php?id=100091003714934">marwa khattab</a>
+      </div>
+    </div>
+  </div>
+  
+  </footer>
+  
+  <!-- End Footer -->
+      
+      <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      
+      <div id="preloader"></div>
+      
+      <!-- Vendor JS Files -->
+      <script src="assests/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assests/vendor/aos/aos.js"></script>
+      <script src="assests/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assests/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assests/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assests/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assests/vendor/php-email-form/validate.js"></script>
+      
+      <!-- Template Main JS File -->
+      <script src="js/main.js"></script>
+  
+ 
+      
+  <script>
+    function openTab(evt, tabName) {
+      const tabContents = document.querySelectorAll(".tab-content");
+      const tabButtons = document.querySelectorAll(".tab-button");
+      tabContents.forEach((tab) => tab.classList.remove("active"));
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+
+  </body>
+  </html>
+  

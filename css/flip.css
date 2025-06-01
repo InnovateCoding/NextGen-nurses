@@ -1,0 +1,166 @@
+
+@media (max-width: 768px) {
+    .quiz-card {
+        width: 100%;
+        height: 100%;
+    }
+    .video-container {
+        width: 100%;
+    }
+    .text-container {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-back img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+
+main {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.quiz-card {
+    perspective: 1000px;
+    width: 75%; /* عرض البطاقة */
+    height: 75%; /* ارتفاع البطاقة */
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.quiz-card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.quiz-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-front {
+    display: flex; /* توزيع المحتويات بجانب بعض */
+    flex-direction: row; /* الفيديو والنص بجانب بعض */
+    width: 100%; /* الكارت يغطي العرض بالكامل */
+    height: 100%; /* الكارت يغطي الارتفاع بالكامل */
+ 
+}
+
+.card-back {
+    background-color: #ccc;
+    transform: rotateY(180deg);
+ 
+    overflow-y: auto; /* يسمح بالتمرير العمودي */
+    padding: 15px; /* مسافة إضافية لراحة القراءة */
+}
+
+.quiz-card:nth-child(1) .card-front { background-color: #ffb3b3; }
+.quiz-card:nth-child(2) .card-front { background-color: #b3d9ff; }
+.quiz-card:nth-child(3) .card-front { background-color: #b3ffcc; }
+.quiz-card:nth-child(4) .card-front { background-color: #ffffb3; }
+
+.video-container {
+    width: 75%; /* الفيديو يأخذ 75% من عرض الكارت */
+    height: 100%; /* الفيديو يغطي ارتفاع البطاقة بالكامل */
+    background-color: rgba(0, 0, 0, 0.1); /* خلفية لتحديد المساحة */
+}
+iframe {
+    width: 100%; /* الفيديو يمتد لعرض الحاوية بالكامل */
+    height: 100%; /* الفيديو يمتد لارتفاع الحاوية بالكامل */
+    border: none; /* إزالة الإطار */
+}
+.text-container {
+    width: 25%; /* عرض الحاوية */
+    height: 100%; /* تأكد أن الحاوية تأخذ ارتفاع البطاقة بالكامل */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* محاذاة رأسية للنص */
+    align-items: flex-start; /* النص يبدأ من اليسار */
+    padding: 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    overflow-y: auto; /* يضيف شريط تمرير عند الحاجة */
+    line-height: 1.5;
+}
+
+
+.text-container strong {
+    margin-bottom: 5px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.btn.restart {
+    background-color: #28a745;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

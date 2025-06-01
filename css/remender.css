@@ -1,0 +1,281 @@
+/* إعدادات عامة */
+
+
+.grid {
+    display: grid;
+    gap: 10px;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px 100px;
+    padding: 20px;
+}
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    justify-self: center;
+    justify-content: start;
+    width: 87%;
+    display: flex;
+;
+  }
+  .card h2 {
+    margin-bottom: 15px;
+  }
+  table {
+    width: 80%;
+   
+    margin-bottom: 20px;
+
+  }
+
+.card-item {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    border: 1px solid #e0e0e0; /* حدود رمادية */
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--color-primary); /* لون أكثر حيوية */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+/* النماذج والأقسام */
+form{
+width: 87%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    border: 1px solid #e0e0e0; /* حدود رمادية */
+}
+
+
+
+#timer-section{
+    width: 87%;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+        border: 1px solid #e0e0e0; /* حدود رمادية */
+    }
+
+
+table {
+        width: 87%;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+        border: 1px solid #e0e0e0; /* حدود رمادية */
+        }
+/* الحقول */
+label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* زوايا أكثر نعومة */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--color-primary); /* تغيير اللون عند التركيز */
+    outline: none;
+}
+
+/* الأزرار */
+button {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; /* زوايا ناعمة */
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px); /* تأثير حركة خفيفة */
+}
+
+/* الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+th {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01); /* تأثير تكبير بسيط */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* الرسم البياني */
+canvas {
+    display: block;
+    margin: 30px auto;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* المؤقت */
+#timer-display {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+/* تحسين قسم المؤقت */
+#timer-section {
+    text-align: center;
+    background-color: #e3f2fd; /* خلفية زرقاء خفيفة */
+}
+
+/* تصدير البيانات */
+#export-csv {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    background-color: #ffc732;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+#export-csv:hover {
+    background-color: #ffc732;
+    transform: translateY(-2px); /* تأثير حركة خفيفة */
+}
+
+
+
+
+/* تصميم الحقول مع الأيقونات */
+.vital-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.vital-item .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.vital-item .icon img {
+    width: 100%;
+    height: auto;
+}
+
+.vital-item label {
+    flex: 1;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.vital-item input {
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#stop-timer{
+width: 87%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative; /* للحفاظ على مكان العناصر الأخرى */
+}

@@ -1,0 +1,71 @@
+/* الحاوية الرئيسية */
+.quiz-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم قسم المؤشرات */
+.indicators {
+    width: 150px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30px); /* عدد الأعمدة يعتمد على حجم العنصر */
+    grid-auto-rows: 30px; /* حجم كل صف */
+    gap: 10px; /* مسافة بين المؤشرات */
+    padding: 10px;
+    justify-content: center; /* توسيط الأعمدة أفقياً */
+    box-sizing: border-box;
+}
+
+/* تصميم كل مؤشر */
+.indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s ease;
+}
+
+/* المؤشر النشط */
+.indicator.active {
+    background-color: #4CAF50;
+}
+
+/* تصميم قسم الأسئلة */
+.question-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* تصميم السؤال */
+#question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* تصميم قائمة الإجابات */
+#answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+#answers li {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#answers li:hover {
+    background-color: #f1f1f1;
+}
