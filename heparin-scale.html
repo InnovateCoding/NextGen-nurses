@@ -31,10 +31,15 @@
     input,button{width:100%;padding:.7rem 1rem;border:1px solid #ccc;border-radius:8px;margin-top:.3rem;font-size:1rem}
     button{background:#007bff;color:#fff;border:none;cursor:pointer;transition:background .2s}
     button:hover{background:#005dc1}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .grid{display:grid;grid-template-columns:.7fr 1fr;gap:1rem;
+      align-items: flex-end; }
     .result{background:#e6f7ff;border-left:6px solid #007bff;padding:1rem;border-radius:8px;margin-top:1rem}
-    table{width:100%;border-collapse:collapse;margin-top:1rem}
-    th,td{border:1px solid #ccc;padding:.5rem;text-align:center}
+
+    table{width:100%;border-collapse:collapse;margin-top:1rem;
+      display: block;         /* يخلي الجدول ممكن يتم تمريره أفقيًا */
+  overflow-x: auto;       /* يسمح بالتمرير لو الجدول أكبر من العرض */}
+    th,td{border:1px solid #ccc;padding:.5rem;text-align:center;white-space: nowrap; 
+    }
     th{background:#fafafa}
     .badge{display:inline-block;padding:.2rem .5rem;border-radius:6px;font-size:.8rem;font-weight:600}
     .success{background:#d1fae5;color:#047857}
