@@ -21,8 +21,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
     *{box-sizing:border-box;font-family:"Inter",sans-serif}
+    #followUp{
+      padding:1.5rem;
+      max-width: 95%;
+      width:100%;
+      margin-inline:auto;
+    }
+    .table-wrapper{            /* غلاف لتمرير أفقي عند الضيق بدون كسر الصفحة */
+      width:100%;
+      overflow-x:auto;
+    }
+    table{
+      width:100%;
+      min-width:600px;        /* يضمن بقاء الأعمدة مقروءة؛ يتقلص داخل الـ wrapper */
+      border-collapse:collapse;
+      font-size:.85rem;
+      margin-bottom:2rem;
+    }
+    @media (max-width:600px){
+      .card{padding:1rem;}
+      /* خانات أصغر في شبكة الأدوية */
+      .med-grid{
+        grid-template-columns:repeat(auto-fit,minmax(min(120px,100%),1fr));
+      }
+      th,td{font-size:12px;padding:.3rem;}
+    }
     
     .card{max-width:800px;margin:auto;background:#fff;padding:2rem;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
     h1{text-align:center;margin-top:0}
