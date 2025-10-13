@@ -153,17 +153,18 @@ button:hover {
 
 /* الجدول */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
+    width: 100% !important;   /* الجدول ياخد عرض الفورم فقط */
+    max-width: 100%;          /* مايزودش عن الشاشة */
+    table-layout: fixed;      /* يخلي الأعمدة تتقلص */
+    word-wrap: break-word;    /* الكلمات تتلف لو كبيرة */
+  
 }
 
 th, td {
-    padding: 12px;
+    padding: 8px;
     text-align: center;
     border: 1px solid #ddd;
-    font-size: 1em;
+    font-size: .9em;
 }
 
 th {
@@ -182,6 +183,16 @@ tr:hover {
     transition: transform 0.2s ease-in-out;
 }
 
+
+  @media (max-width: 600px) {
+    tbody, td, tfoot, th, thead, tr {
+        font-size: 0.8em;
+        padding: 6px;
+  }}
+
+
+
+  
 /* الرسم البياني */
 canvas {
     display: block;

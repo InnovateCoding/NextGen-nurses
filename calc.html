@@ -1,38 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ar">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BBK2JZ9P4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9BBK2JZ9P4');
-</script>
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7670657118816295"
-     crossorigin="anonymous"></script>
-     
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Drug Information Search</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>حاسبة انتهاء المحلول (24 ساعة)</title>
   <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
-</head>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.03)}
+  
+    .card{max-width: 800px;margin: auto;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px);color:#e6eef6;background:linear-gradient(180deg,#071024 0%, #07192b 100%);padding: 2rem;}
 
+    h1{margin:0 0 6px;font-size:20px;text-align:right}
+    p.lead{margin:0 0 18px;color:var(--muted);text-align:right}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
+    label{display:block;font-size:13px;margin-bottom:6px;text-align:right}
 
+    input[type='number'] {width:90%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;font-size:15px}
+   .full{grid-column:1/-1}
+   select {
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.04);
+    background-color:#2e3b4e; /* خلفية غامقة بدل الأبيض */
+    color:#fff;               /* النص أبيض */
+    font-size:15px;
+    cursor:pointer;
+  }
+  
+  select option {
+    background-color:#26303f;
+    color:#fff;
+  }
+  
+  select option:hover,
+  select option:checked {
+    background-color:#00a708;
+  }
+  
 
+input[type='time'] {width:90%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;font-size:15px
+}
 
-
-
-  <!-- Favicons -->
+    .radio-row{display:flex;gap:8px;justify-content:center;align-items:center}
+    .radio-row input{margin-left:6px}
+    button{background:var(--accent);border:none;padding:10px 14px;border-radius:8px;color:#042026;font-weight:600;cursor:pointer}
+    .mutebtn{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+    .result{margin-top:14px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(6,182,212,0.06), rgba(3,105,161,0.02));display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .result .left{text-align:right}
+    .big{font-size:20px;font-weight:700}
+    .small{color:var(--muted);font-size:13px}
+    .help{font-size:13px;color:var(--muted);margin-top:10px;text-align:right}
+    @media(max-width:640px){form{grid-template-columns:1fr;}
+      .card{padding:16px}
+      h1{font-size:18px}
+    }
+  </style>  
+  <!-- Template Main CSS File -->
+     <!-- Favicons -->
   <link href="img/logo.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -44,14 +68,11 @@
   <!-- Vendor CSS Files -->
   <link href="assests/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assests/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assests/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assests/vendor/fontawesome-fre e/css/all.min.css" rel="stylesheet">
   <link href="assests/vendor/aos/aos.css" rel="stylesheet">
   <link href="assests/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assests/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="css/main.css" rel="stylesheet">
-  <link href="css/medcalc.css" rel="stylesheet">
 </head>
 
 <body class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 min-h-screen ">
@@ -82,7 +103,7 @@
                 
                 <li class="dropdown"><a href="vidio1.html"><span>ICU</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
              <ul>
-
+              <li><a href="calc.html">fluid end time calc</a></li>
               <li><a href="index.html"> Fluid Balance chart</a></li>
                 
                 <li><a href="heparin-scale.html">heparin scale</a></li>
@@ -258,22 +279,79 @@
       
             </div>
           </div><!-- End Breadcrumbs -->
+  <main class="card" role="main" dir="rtl" >
+    <h1>حاسبة انتهاء المحلول (نظام 24 ساعة)</h1>
+    <p class="lead">ادخلي الحجم، السرعة، ووقت البدء (بصيغة 24 ساعة) — ستحصلين على وقت الانتهاء والمدة بدقّة.</p>
 
-  <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl p-8">
-    <h1 class="text-3xl font-bold text-center text-blue-400 mb-8">🔍 Drug Information Search</h1>
+    <form id="calcForm" autocomplete="off" onsubmit="return false;">
+      <div>
+        <label for="volume">الحجم (mL)</label>
+        <input id="volume" type="number" min="1" step="1" inputmode="numeric" placeholder="مثال: 1000" required />
+      </div>
 
-    <input
-      type="text"
-      id="searchBox"
-      placeholder="Type drug name (e.g. Esomeprazole)..."
-      onkeyup="searchDrug()"
-      class="w-full p-3 border border-indigo-300 rounded-xl mb-6 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-    />
+      <div>
+        <label>نوع المدخل</label>
+        <div class="radio-row">
+          <label class="small" style="margin-left:8px">mL / hr
+            <input type="radio" name="mode" value="mlhr" checked />
+          </label>
+          <label class="small">drops / min
+            <input type="radio" name="mode" value="drops" />
+          </label>
+        </div>
+      </div>
 
-    <div id="drugInfo" class="space-y-6"></div>
-  </div>
- <!-- ======= Footer ======= -->
- <footer id="footer" class="footer">
+      <div id="mlhrBlock">
+        <label for="rateMl">السرعة (mL / hour)</label>
+        <input id="rateMl" type="number" min="0.1" step="0.1" placeholder="مثل: 125" />
+      </div>
+
+      <div id="dropsBlock" style="display:none">
+        <label for="rateDrops">السرعة (drops / minute)</label>
+        <input id="rateDrops" type="number" min="1" step="1" placeholder="مثال: 30" />
+        <label for="dripFactor" style="margin-top:8px">Drip factor (gtt/mL)</label>
+        <select id="dripFactor">
+          <option value="10">10 gtt/mL</option>
+          <option value="15">15 gtt/mL</option>
+          <option value="20" selected>20 gtt/mL</option>
+          <option value="60">60 gtt/mL</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="startTime">وقت البدء (24 ساعة)</label>
+        <input id="startTime" type="time" required />
+      </div>
+<div>
+        <label for="startNow">خيارات</label>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <button id="useNow" class="mutebtn" type="button">استخدم الوقت الحالي</button>
+          <button id="calculate" type="button">احسب وقت الانتهاء</button>
+        </div>
+      </div>
+
+      <div class="full">
+        <div id="output" class="result" aria-live="polite" style="display:none">
+          <div class="left">
+            <div class="big" id="endTimeText">00:00</div>
+            <div class="small">وقت الانتهاء (24 ساعة)</div>
+          </div>
+          <div>
+            <div class="big" id="durationText">0h 0m</div>
+            <div class="small">المدة</div>
+            <div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+              <button id="copyBtn" type="button" class="mutebtn">نسخ النتيجة</button>
+            </div>
+          </div>
+        </div>
+        <div id="message" class="help"></div>
+      </div>
+
+    </form>
+
+    <p class="help">ملاحظات: إذا اخترت drops/min تأكدي من اختيار الـ <strong>drip factor</strong> الصحيح للمجس (10, 15, 20, 60).</p>
+  </main>
+  <footer id="footer" class="footer">
 
     <div class="footer-content position-relative">
       <div class="container">
@@ -368,18 +446,129 @@
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     
-    <div id="preloader"></div>
+  
+  <script>
+    // عناصر الواجهة
+    const modeRadios = document.querySelectorAll('input[name="mode"]');
+    const mlhrBlock = document.getElementById('mlhrBlock');
+    const dropsBlock = document.getElementById('dropsBlock');
+    const rateMl = document.getElementById('rateMl');
+    const rateDrops = document.getElementById('rateDrops');
+    const dripFactor = document.getElementById('dripFactor');
+    const volume = document.getElementById('volume');
+    const startTime = document.getElementById('startTime');
+    const calculateBtn = document.getElementById('calculate');
+    const useNowBtn = document.getElementById('useNow');
+    const output = document.getElementById('output');
+    const endTimeText = document.getElementById('endTimeText');
+    const durationText = document.getElementById('durationText');
+    const message = document.getElementById('message');
+    const copyBtn = document.getElementById('copyBtn');
 
-    <script src="assests/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assests/vendor/aos/aos.js"></script>
-    <script src="assests/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assests/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assests/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assests/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assests/vendor/php-email-form/validate.js"></script>
-    
-    <!-- Template Main JS File -->
-    <script src="js/main.js"></script>
-    <script src="js/adultmed.js"></script>
+    function showMode(){
+      const mode = document.querySelector('input[name="mode"]:checked').value;
+      if(mode === 'mlhr'){
+        mlhrBlock.style.display = '';
+        dropsBlock.style.display = 'none';
+      } else {
+        mlhrBlock.style.display = 'none';
+        dropsBlock.style.display = '';
+      }
+      clearOutput();
+    }
+
+    modeRadios.forEach(r=> r.addEventListener('change', showMode));
+
+    useNowBtn.addEventListener('click', ()=>{
+      const now = new Date();
+      const hh = String(now.getHours()).padStart(2,'0');
+      const mm = String(now.getMinutes()).padStart(2,'0');
+      startTime.value = hh + ':' + mm;
+      message.textContent = 'تم وضع الوقت الحالي.';
+      clearOutput();
+    });
+
+    calculateBtn.addEventListener('click', ()=>{
+      message.textContent = '';
+      output.style.display = 'none';
+
+      // تحقق من الحقول
+      const vol = parseFloat(volume.value);
+      if(!vol || vol <= 0){ message.textContent = 'الرجاء إدخال حجم صالح (mL > 0).'; return; }
+
+      const mode = document.querySelector('input[name="mode"]:checked').value;
+      let rate_mL_per_hr = null;
+
+      if(mode === 'mlhr'){
+        const r = parseFloat(rateMl.value);
+        if(!r || r <= 0){ message.textContent = 'الرجاء إدخال سرعة صحيحة بالـ mL/hr.'; return; }
+        rate_mL_per_hr = r;
+      } else {
+        const drops = parseFloat(rateDrops.value);
+        const df = parseFloat(dripFactor.value);
+        if(!drops || drops <= 0){ message.textContent = 'الرجاء إدخال سرعة صحيحة بالـ drops/min.'; return; }
+        if(!df || df <= 0){ message.textContent = 'قيمة drip factor غير صحيحة.'; return; }
+        const ml_per_min = drops / df; // mL per minute
+        rate_mL_per_hr = ml_per_min * 60.0;
+        if(rate_mL_per_hr === 0){ message.textContent = 'السرعة المحسوبة صفر — راجعي القيم.'; return; }
+      }
+// الوقت
+      if(!startTime.value){ message.textContent = 'الرجاء إدخال وقت البدء (بتنسيق 24 ساعة).'; return; }
+      const [sh, sm] = startTime.value.split(':').map(x=>parseInt(x,10));
+      if(Number.isNaN(sh) || Number.isNaN(sm)){ message.textContent = 'صيغة وقت البدء غير صحيحة.'; return; }
+
+      // احسب المدة بالساعات كعدد عشري
+      const duration_hours_decimal = vol / rate_mL_per_hr; // قد يكون كبيرًا
+      if(!isFinite(duration_hours_decimal) || duration_hours_decimal < 0){ message.textContent = 'خطأ في الحساب — راجعي القيم.'; return; }
+
+      const duration_hours = Math.floor(duration_hours_decimal);
+      const duration_minutes = Math.round((duration_hours_decimal - duration_hours) * 60);
+
+      // إضافة إلى وقت البدء
+      let endHour = sh + duration_hours;
+      let endMinute = sm + duration_minutes;
+      if(endMinute >= 60){
+        endMinute -= 60;
+        endHour += 1;
+      }
+      // بما أنه ممكن تزيد كثيرًا (أيام) نأخذ mod 24
+      const daysPassed = Math.floor(endHour / 24);
+      endHour = endHour % 24;
+
+      const formattedEnd = String(endHour).padStart(2,'0') + ':' + String(endMinute).padStart(2,'0');
+
+      endTimeText.textContent = formattedEnd + (daysPassed>0 ? ` (بعد ${daysPassed} يوم)` : '');
+
+
+      // مدة بصيغة Hh Mm
+      const totalHours = Math.floor(duration_hours_decimal);
+      const totalMinutes = Math.round((duration_hours_decimal - totalHours)*60);
+      const durStr = `${totalHours}h ${String(totalMinutes).padStart(2,'0')}m`;
+      durationText.textContent = durStr;
+
+      output.style.display = '';
+      message.textContent = '';
+    });
+
+    copyBtn.addEventListener('click', async ()=>{
+      const text = `وقت الانتهاء: ${endTimeText.textContent} — المدة: ${durationText.textContent}`;
+      try{
+        await navigator.clipboard.writeText(text);
+        message.textContent = 'نسخت النتيجة إلى الحافظة.';
+      }catch(e){
+        message.textContent = 'لا يمكن النسخ تلقائياً — حددي وانسخي النص يدوياً.';
+      }
+    });
+
+    function clearOutput(){ output.style.display = 'none'; message.textContent = ''; }
+
+    // تهيئة: ضبط وقت الآن كافتراضي
+    (function init(){
+      const now = new Date();
+      startTime.value = String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+    })();
+
+  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
