@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Nurses | Account</title>
+  <link href="assests/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assests/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <style>
+    .account-page{min-height:100vh;background:linear-gradient(135deg,#f5f9ff,#eef6f5);display:flex;align-items:center;padding:40px 15px}
+    .account-card{max-width:460px;width:100%;margin:auto;background:#fff;border-radius:22px;padding:32px;box-shadow:0 15px 45px rgba(0,0,0,.10)}
+    .account-card h1{font-weight:700;margin-bottom:8px}.account-card .sub{color:#6c757d;margin-bottom:25px}
+    .auth-message{display:none;padding:12px;border-radius:10px;margin-bottom:15px}.auth-message.error{background:#fdecec;color:#a33}.auth-message.success{background:#eaf8ef;color:#176b35}
+    .account-card .form-control{height:48px;border-radius:10px}.account-card .btn{height:48px;border-radius:10px}
+    .switch{margin-top:18px;text-align:center}.switch a{font-weight:600}.form-section{display:none}.form-section.active{display:block}
+  </style>
+</head>
+<body>
+<div class="account-page">
+  <div class="account-card">
+    <div class="text-center mb-3"><img src="img/logo.png" alt="NextGen Nurses" style="width:65px"></div>
+    <h1 class="text-center">NextGen Nurses</h1>
+    <p class="sub text-center">Your learning progress, saved with your account.</p>
+    <div id="auth-message" class="auth-message"></div>
+
+    <section id="login-section" class="form-section active">
+      <h4 class="mb-3">Login</h4>
+      <form id="login-form">
+        <input id="login-email" type="email" class="form-control mb-3" placeholder="Email" required>
+        <input id="login-password" type="password" class="form-control mb-3" placeholder="Password" required>
+        <button class="btn btn-primary w-100" type="submit">Login</button>
+      </form>
+      <div class="switch">Don't have an account? <a href="#" id="show-register">Create one</a></div>
+    </section>
+
+    <section id="register-section" class="form-section">
+      <h4 class="mb-3">Create account</h4>
+      <form id="register-form">
+        <input id="register-name" type="text" class="form-control mb-3" placeholder="Full name" required>
+        <input id="register-email" type="email" class="form-control mb-3" placeholder="Email" required>
+        <input id="register-password" type="password" minlength="6" class="form-control mb-3" placeholder="Password (6+ characters)" required>
+        <button class="btn btn-primary w-100" type="submit">Create account</button>
+      </form>
+      <div class="switch">Already have an account? <a href="#" id="show-login">Login</a></div>
+    </section>
+
+    <div class="text-center mt-4"><a href="main.html">← Back to NextGen Nurses</a></div>
+  </div>
+</div>
+<script>
+  document.getElementById('show-register').onclick = (e) => { e.preventDefault(); document.getElementById('login-section').classList.remove('active'); document.getElementById('register-section').classList.add('active'); };
+  document.getElementById('show-login').onclick = (e) => { e.preventDefault(); document.getElementById('register-section').classList.remove('active'); document.getElementById('login-section').classList.add('active'); };
+</script>
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>

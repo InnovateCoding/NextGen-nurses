@@ -1,3 +1,4 @@
+import { saveExamResult } from "./save-exam-result.js";
 
 const questions = [
     {
@@ -429,6 +430,20 @@ timerElement.textContent = `Time left: ${Math.floor(timeLeft / 60)} minutes, ${t
    questionContainer.style.display = 'none';
    resultContainer.style.display = 'flex';
    scoreElement.textContent = `You scored ${score}/${questions.length}`;
+
+        saveExamResult({
+            examId: "nclex-exam-1",
+            examName: "NCLEX Exam 1",
+            score,
+            totalQuestions: questions.length
+        }).then((result) => {
+            if (!result.saved) {
+                const notice = document.createElement("p");
+                notice.textContent = "سجلي الدخول لحفظ نتيجتك في حسابك.";
+                notice.style.cssText = "margin-top:15px;font-weight:600;color:#0d6efd;";
+                document.getElementById("result-container")?.appendChild(notice);
+            }
+        }).catch(console.error);
 
 }
  
