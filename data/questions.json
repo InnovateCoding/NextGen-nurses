@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "examId": "obstetrics-1",
+      "category": "Obstetrics",
+      "topic": "Amniotic Fluid",
+      "question": "The nurse observes the patient's amniotic fluid and decides that it appears normal because it is:",
+      "options": [
+        {
+          "value": "A",
+          "text": "Red and dark amber in color"
+        },
+        {
+          "value": "B",
+          "text": "Milky turbid"
+        },
+        {
+          "value": "C",
+          "text": "Clear and containing shreds of mucus, mostly colorless"
+        },
+        {
+          "value": "D",
+          "text": "Cloudy, greenish-yellow, and containing little white specks"
+        },
+        {
+          "value": "E",
+          "text": "Meconium stained"
+        }
+      ],
+      "correctAnswer": "C",
+      "reason": "Clear fluid with shreds of mucus and mostly colorless is the normal appearance of amniotic fluid. Other colors may indicate meconium, blood, or infection."
+    }
+  ]
